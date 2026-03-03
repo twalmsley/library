@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Opening Times</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Library Opening Times</h1>
+      <button type="button" class="theme-toggle" aria-label="Toggle light or dark mode">
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="status-card" aria-live="polite">
+        <p class="status-label">Currently</p>
+        <p class="status-value" id="status-value">—</p>
+        <p class="countdown" id="countdown" aria-live="polite">—</p>
+      </section>
+
+      <section class="schedule-section" aria-labelledby="schedule-heading">
+        <h2 id="schedule-heading">Weekly schedule</h2>
+        <div class="schedule" id="schedule" role="table" aria-label="Opening hours by day">
+          <!-- Filled by app.js -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>All times are in your local time. Countdown updates every minute.</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
